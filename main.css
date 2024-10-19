@@ -1,0 +1,1055 @@
+/* Media Query */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.2em;
+    overflow-x: hidden; /* Evita a rolagem lateral */
+  }
+}
+@media screen and (min-width: 900px) {
+  header .btn-menu-mob {
+    display: none;
+  }
+}
+
+/* Botão Menu Mobile */
+.btn-menu-mob {
+  position: fixed;
+  cursor: pointer;
+  margin-left: 87vw;
+  margin-top: 5%;
+  width: 40px; /* Define a largura fixa do botão */
+  height: 30px; /* Altura total para conter as duas linhas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn-menu-mob div {
+  background-color: black;
+  height: 6px;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Suavidade para as transformações */
+}
+
+/* Estados iniciais */
+.line-menumob-1 {
+  width: 40px;
+}
+
+.line-menumob-2 {
+  width: 40px;
+}
+
+/* Estilo menu-mobile */
+body.no-overflow {
+  overflow: hidden;
+}
+
+header .menu-mobile {
+  width: 0;
+  height: 0;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+header .menu-mobile nav ul {
+  list-style: none;
+}
+
+header .menu-mobile nav a {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  padding: 25px 0;
+  display: block;
+  width: 120vw;
+  margin-left: -3%;
+}
+
+header .menu-mobile nav a:hover {
+  background-color: white; /* Fundo branco ao passar o mouse */
+  color: black; /* Texto preto */
+  box-shadow: 0 0 20px #fff; /* Efeito de sombra opcional */
+}
+
+header .menu-mobile.abrir {
+  width: 100%;
+  height: 110vh;
+  background-color: rgba(0, 0, 0, 0.947);
+}
+
+/* Transformações para o "X" */
+.line-menumob-1.ativo1 {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: white;
+}
+
+.line-menumob-2.ativo2 {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: white;
+}
+
+/* Esconde a linha do meio quando as linhas se cruzam */
+.line-menumob-1.ativo1,
+.line-menumob-2.ativo2 {
+  width: 40px;
+}
+
+/* Geral */
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+}
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Evita a rolagem lateral */
+}
+
+main {
+  flex: 1;
+}
+
+a:link,
+a:visited {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Href */
+.barra {
+  margin-top: 30vh;
+  position: static;
+  text-align: center;
+}
+
+.barra a {
+  margin-left: 1%;
+  margin-right: 1%;
+  color: #704d34;
+  transition: all 0.4s;
+  margin-bottom: 1vh;
+  font-size: 1.1em;
+}
+
+a:hover {
+  opacity: 0.3;
+}
+
+/* Footer */
+:root {
+  --color-neutral-0: #0e0c0c;
+  --color-neutral-10: #171717;
+  --color-neutral-30: #a8a29e;
+  --color-neutral-40: #47141d;
+  --color-neutral-60: #e9bcc4;
+  --color-neutral-70: #d4af37;
+  --color-neutral-80: #f1ecec;
+}
+
+footer {
+  width: 100%;
+  color: var(--color-neutral-40);
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+#footer_content {
+  background-color: var(--color-neutral-60);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+  margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+#footer_social_media .footer-link:hover {
+  opacity: 0.3;
+}
+
+#footer_social_media .footer-link:hover i {
+  font-size: 1.25rem;
+}
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-list .footer-link {
+  color: var(--color-neutral-30);
+  transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+  color: #7f37c9;
+}
+
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#footer_subscribe p {
+  color: var(--color-neutral-30);
+}
+
+#input_group {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+}
+
+#input_group input {
+  all: unset;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+#input_group button {
+  background-color: #7f37c9;
+  border: none;
+  color: var(--color-neutral-70);
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#input_group button:hover {
+  opacity: 0.8;
+}
+
+#footer_copyright {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-neutral-60);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  #footer_content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 426) {
+  #footer_content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 2rem;
+  }
+}
+
+/* Box */
+.boxcinza {
+  width: 100%;
+  height: 29vh;
+  background-color: #e9bcc4;
+  z-index: -9;
+}
+
+.boxHeader {
+  width: 100%;
+  height: 29vh;
+}
+
+.box-barra-main {
+  background-color: blue;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+}
+
+.box-barra-aux {
+  background-color: blue;
+  width: 100%;
+  height: 10vh;
+}
+
+.box-barra-aux2 {
+  background-color: red;
+  width: 100%;
+  height: 10%;
+  z-index: 1000;
+  position: relative;
+}
+
+.boxCarrosselDourada {
+  border: 27px solid #A87A40;
+  /*855634*/
+}
+
+.boxDentroCarrossel {
+  background-color: var(--color-neutral-80);
+}
+
+.boxAmarela {
+  background-color: #f2dfaa;
+  text-align: center;
+}
+
+.boxAmarelaDouradaBorda {
+  border: 25px solid #ae9a63;
+}
+
+.boxDentroMVV {
+  background-color: #f2dfaa;
+}
+
+/* Icones */
+#instagram1 {
+  width: 35px;
+  transition: all 0.4s;
+}
+
+#instagram1:hover {
+  opacity: 0.3;
+}
+
+.imagemDeFundo {
+  background-image: url(imagemFundoIndex.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.perguntas-faq{
+  background-color: antiquewhite;
+  color: var(--color-neutral-40);
+  padding-top: 20px;
+  padding-left: 20px;
+  margin: 0;
+  -webkit-text-stroke: black 1.2px;
+  font-size: 1.3rem;
+}
+
+.respostas-faq{
+  background-color: antiquewhite;
+  color: var(--color-neutral-40);
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-shadow: var(--color-neutral-40) 0.5px 0.5px 2px;
+  font-size: 1.2rem;
+}
+
+/* Pesquisa */
+
+#list {
+  padding-top: 100px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.products {
+  margin-left: 0px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.products:hover {
+  background-color: #f0f0f0; /* Destaque no hover */
+}
+
+/* Fontes */
+.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.moderustic-uniquifier {
+  font-family: "Moderustic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.kanit-thin {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.kanit-extralight {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.kanit-light {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-medium {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semibold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.kanit-black {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.kanit-thin-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.kanit-extralight-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.kanit-light-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.kanit-regular-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.kanit-medium-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.kanit-semibold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.kanit-bold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.kanit-extrabold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.kanit-black-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.raleway-uniquifier {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.box-principal {
+  width: 100%;
+  height: 43vh;
+  background-color: antiquewhite;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #704d34;
+}
+
+.box-linha {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #704d34;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 1.5vh;
+}
+
+.box-perguntas {
+  width: 100%;
+  height: 43vh;
+  background-color: antiquewhite;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #704d34;
+}
+
+
+/* Card Geral(Luís) */
+.contener_card{
+  margin-left: -5vw;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.Card1 {
+  background-color: antiquewhite;
+  z-index: -1;
+  width: 90vw;
+  height: auto;
+  margin-top: 10vw;
+  margin-left: 5vw;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.Card2 {
+  background-color: antiquewhite;
+  z-index: -1;
+  width: 90vw;
+  height: auto;
+  margin-top: 10vw;
+  margin-left: 5vw;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.Card3 {
+  background-color: antiquewhite;
+  z-index: -1;
+  width: 90vw;
+  height: auto;
+  margin-top: 10vw;
+  margin-left: 5vw;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.Card4 {
+  background-color: antiquewhite;
+  z-index: -1;
+  width: 90vw;
+  height: auto;
+  margin-top: 10vw;
+  margin-left: 5vw;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+/* Imagens Cards Bolo(Luís) */
+.img_geral1 {
+  width: 40vw;
+  height: 30vw;
+  border-radius: 5vw;
+  margin-top: -10%;
+  margin-left: 50%;
+}
+
+.img_geral2 {
+  width: 40vw;
+  height: 45vw;
+  border-radius: 5vw;
+  margin-top: -7%;
+  margin-left: 55%;
+}
+
+.img_geral3 {
+  width: 30vw;
+  height: 60vw;
+  border-radius: 5vw;
+  margin-top: -12%;
+  margin-left: 50%;
+}
+
+.img_geral4 {
+  width: 30vw;
+  height: 60vw;
+  border-radius: 5vw;
+  margin-top: -12%;
+  margin-left: 50%;
+}
+
+/* Nome Cards Bolo(Luís) */
+.nome_geral1 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #704d34;
+}
+
+.nome_geral2 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #704d34;
+
+}
+
+.nome_geral3 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #704d34;
+}
+
+.nome_geral4 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #704d34;
+}
+
+.Bar_cardapio {
+  background-color: #704d34;
+  height: 19vw;
+}
+
+.ttl_Bolo {
+  color: #f2dfaa;
+  background-color: #704d34;
+  height: 16vw;
+  text-align: center;
+}
+
+/* Descricao dos Cards (Luís) */
+.descricao1 {
+  color: #704d34;
+  background-color: antiquewhite;
+  border-radius: 10%;
+  margin-top: 6%;
+  margin-left: 5.5%;
+  width: 80vw;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+}
+.descricao2 {
+  color: #704d34;
+  background-color: antiquewhite;
+  border-radius: 10%;
+  margin-top: 5%;
+  margin-left: 5.5%;
+  width: 80vw;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+}
+.descricao3 {
+  color: #704d34;
+  background-color: antiquewhite;
+  border-radius: 10%;
+  margin-top: 7%;
+  margin-left: 5.5%;
+  width: 80vw;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+}
+.descricao4 {
+  color: #704d34;
+  background-color: antiquewhite;
+  border-radius: 10%;
+  margin-top: 7%;
+  margin-left: 5.5%;
+  width: 80vw;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Bar_Bolo_pote {
+  color: #f2dfaa;
+  background-color: #704d34;
+  height: 16vw;
+  text-align: center;
+}
+
+.contraste {
+  background-color: #704d34;
+}
+
+/* Parte Samuel*/
+.box_princ {
+  width: 100%;
+  height: 195vh;
+  background-color: #e7e0d2;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #e7e0d2;
+}
+p.titulo {
+  width: 100%;
+  height: 0.2vh;
+  font-size: 2rem;
+  text-align: center;
+  color: #704d34;
+}
+
+.linha {
+  width: 100%;
+  height: 0.2vh;
+  background-color: #704d34;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 6vh;
+  margin-bottom: 8vh;
+}
+p.txt1 {
+  width: 85%;
+  height: 1vh;
+  font-size: 1rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 4vh;
+}
+p.txt2 {
+  width: 90%;
+  height: 1vh;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 4vh;
+  margin-bottom: 10vh;
+}
+p.txt3 {
+  width: 90%;
+  height: 1vh;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 3vh;
+}
+.txt4 {
+  width: 90%;
+  height: 1vh;
+  font-size: 1rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 3vh;
+}
+img.icon1 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 0vh;
+  margin-left: 0%;
+}
+img.icon2 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 15vh;
+  margin-left: 0%;
+  margin-bottom: 2vh;
+}
+img.icon3 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 15vh;
+  margin-left: 0%;
+}
+img.icon4 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 19vh;
+  margin-left: 0%;
+  margin-bottom: -7vh;
+}
+
+/* Parte Samuel*/
+.box_princ {
+  width: 100%;
+  height: 195vh;
+  background-color: #e7e0d2;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #e7e0d2;
+}
+p.titulo {
+  width: 100%;
+  height: 0.2vh;
+  font-size: 2rem;
+  text-align: center;
+  color: #704d34;
+}
+
+.linha {
+  width: 100%;
+  height: 0.2vh;
+  background-color: #704d34;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 6vh;
+  margin-bottom: 8vh;
+}
+p.txt1 {
+  width: 85%;
+  height: 1vh;
+  font-size: 1rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 4vh;
+}
+p.txt2 {
+  width: 90%;
+  height: 1vh;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 4vh;
+  margin-bottom: 10vh;
+}
+p.txt3 {
+  width: 90%;
+  height: 1vh;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 3vh;
+}
+.txt4 {
+  width: 90%;
+  height: 1vh;
+  font-size: 1rem;
+  text-align: center;
+  color: #704d34;
+  margin-top: 2vh;
+  margin-left: 3vh;
+}
+img.icon1 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 0vh;
+  margin-left: 0%;
+}
+img.icon2 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 15vh;
+  margin-left: 0%;
+  margin-bottom: 2vh;
+}
+img.icon3 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 15vh;
+  margin-left: 0%;
+}
+img.icon4 {
+  width: 18%;
+  height: 9vh;
+  margin-top: 19vh;
+  margin-left: 0%;
+  margin-bottom: -7vh;
+}
+
+/* Parte ruim */
+.foto-bolos{
+  width: 48vw;
+  height: 25vh;
+  background-color: #fadbdb;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fadbdb;
+  margin-top: 1.9vh;
+  border-radius: 20px;
+}
+.produtos-card{
+  width: 100%;
+  height: 6vh;
+  background-color: #704d34;
+  color: #704d34;
+  margin-top: 1vh;
+  border-radius: 10px;
+}
+img.bolo-card{
+  width: 35vw;
+  height: 20vh;
+  margin-top: -18px;
+}
+.foto-torta{
+  width: 48vw;
+  height: 25vh;
+  background-color: #fadbdb;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fadbdb;
+  margin-top: 1.9vh;
+  border-radius: 20px; 
+}
+img.torta-card{
+  width: 100%;
+  height: 20vh;
+  border-radius: 20px;
+}
+.foto-pote{
+  width: 48vw;
+  height: 25vh;
+  background-color: #fadbdb;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fadbdb;
+  margin-top: 1.9vh;
+  border-radius: 20px; 
+}
+img.pote-card{
+  width: 50vw;
+  height: 25vh;
+  border-radius: 20px;
+}
+.foto-recheados{
+  width: 48vw;
+  height: 25vh;
+  background-color: #fadbdb;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fadbdb;
+  margin-top: 1.9vh;
+  border-radius: 20px; 
+}
+.foto-paes{
+  width: 48vw;
+  height: 25vh;
+  background-color: #fadbdb;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fadbdb;
+  margin-top: 1.9vh;
+  border-radius: 20px; 
+}
+.foto-doces{
+  width: 48vw;
+  height: 25vh;
+  background-color: #fadbdb;
+  font-family: "kanit", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fadbdb;
+  margin-top: 1.9vh;
+  border-radius: 20px; 
+}
+img.paes-card{
+  width: 15vw;
+  height: 20vh;
+  border-radius: 20px;
+  margin-top: -2px;
+  margin-left: 0.5vw;
+}
+img.recheado-card{
+  width: 55vw;
+  height: 25vh;
+  border-radius: 20px;
+  margin-top: -8px;
+}
+
+ 
